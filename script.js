@@ -230,15 +230,28 @@ function initParallaxEffects() {
             heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
         }
         
-        // About section parallax
-        const aboutVisual = document.querySelector('.about-visual');
-        if (aboutVisual) {
-            const aboutSection = document.querySelector('.about');
+        // Floating card scroll movement
+        const floatingCard = document.querySelector('.floating-card');
+        const aboutSection = document.querySelector('.about');
+        
+        if (floatingCard && aboutSection) {
             const aboutRect = aboutSection.getBoundingClientRect();
+            const cardRect = floatingCard.getBoundingClientRect();
             
+            // Check if About section is in viewport
             if (aboutRect.top < window.innerHeight && aboutRect.bottom > 0) {
-                const offset = aboutRect.top - window.innerHeight;
-                aboutVisual.style.transform = `translateY(${offset * 0.2}px)`;
+                const sectionHeight = aboutSection.offsetHeight;
+                const cardHeight = floatingCard.offsetHeight;
+                const maxMovement = sectionHeight - cardHeight - 240; // 240px for padding
+                
+                // Calculate scroll progress within the About section
+                const scrollProgress = Math.max(0, Math.min(1, 
+                    (window.innerHeight - aboutRect.top) / (window.innerHeight + sectionHeight)
+                ));
+                
+                // Move the card based on scroll progress
+                const movement = scrollProgress * maxMovement;
+                floatingCard.style.transform = `translateY(${movement}px)`;
             }
         }
     });
