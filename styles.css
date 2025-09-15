@@ -6,18 +6,18 @@
 }
 
 :root {
-    --primary-color: #8B7355;
-    --secondary-color: #A0895C;
-    --accent-color: #6B5B47;
-    --gold-color: #D4AF37;
-    --text-light: #FEFEFE;
-    --text-dark: #3E3426;
-    --text-gray: #7A6F5D;
-    --gradient-primary: linear-gradient(135deg, #8B7355 0%, #A0895C 50%, #6B5B47 100%);
-    --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #E6C547 100%);
-    --shadow-light: 0 4px 20px rgba(139, 115, 85, 0.1);
-    --shadow-medium: 0 8px 40px rgba(139, 115, 85, 0.15);
-    --shadow-heavy: 0 20px 60px rgba(139, 115, 85, 0.2);
+    --primary-color: #7C9D96;
+    --secondary-color: #A1CCD1;
+    --accent-color: #E9B384;
+    --gold-color: #E9B384;
+    --text-light: #F4F2DE;
+    --text-dark: #2C3E3A;
+    --text-gray: #5A6B66;
+    --gradient-primary: linear-gradient(135deg, #7C9D96 0%, #A1CCD1 50%, #E9B384 100%);
+    --gradient-gold: linear-gradient(135deg, #E9B384 0%, #F4B860 100%);
+    --shadow-light: 0 4px 20px rgba(124, 157, 150, 0.1);
+    --shadow-medium: 0 8px 40px rgba(124, 157, 150, 0.15);
+    --shadow-heavy: 0 20px 60px rgba(124, 157, 150, 0.2);
     --border-radius: 12px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -80,15 +80,15 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(245, 242, 232, 0.95);
+    background: rgba(244, 242, 222, 0.95);
     backdrop-filter: blur(20px);
     z-index: 1000;
     transition: var(--transition);
-    border-bottom: 1px solid rgba(139, 115, 85, 0.2);
+    border-bottom: 1px solid rgba(124, 157, 150, 0.2);
 }
 
 .navbar.scrolled {
-    background: rgba(245, 242, 232, 0.98);
+    background: rgba(244, 242, 222, 0.98);
     box-shadow: var(--shadow-medium);
 }
 
@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(139, 115, 85, 0.8) 0%, rgba(160, 137, 92, 0.6) 100%);
+    background: linear-gradient(45deg, rgba(124, 157, 150, 0.8) 0%, rgba(161, 204, 209, 0.6) 100%);
 }
 
 .animated-bg {
@@ -239,7 +239,7 @@ h1, h2, h3, h4, h5, h6 {
 .shape {
     position: absolute;
     border-radius: 50%;
-    background: rgba(212, 175, 55, 0.1);
+    background: rgba(233, 179, 132, 0.1);
     animation: float 6s ease-in-out infinite;
 }
 
@@ -427,7 +427,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Services Section */
 .services {
     padding: 100px 0;
-    background: linear-gradient(135deg, #F5F2E8 0%, #EDE6D3 100%);
+    background: linear-gradient(135deg, #F4F2DE 0%, #E9E6CE 100%);
 }
 
 .services-grid {
@@ -758,7 +758,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Leadership Section */
 .leadership {
     padding: 100px 0;
-    background: linear-gradient(135deg, #F5F2E8 0%, #EDE6D3 100%);
+    background: linear-gradient(135deg, #F4F2DE 0%, #E9E6CE 100%);
 }
 
 .leadership-grid {
@@ -855,7 +855,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Contact Section */
 .contact {
     padding: 100px 0;
-    background: linear-gradient(135deg, #F5F2E8 0%, #EDE6D3 100%);
+    background: linear-gradient(135deg, #F4F2DE 0%, #E9E6CE 100%);
 }
 
 .contact-content {
@@ -1043,7 +1043,7 @@ h1, h2, h3, h4, h5, h6 {
         left: -100%;
         top: 80px;
         flex-direction: column;
-        background: rgba(245, 242, 232, 0.98);
+        background: rgba(244, 242, 222, 0.98);
         width: 100%;
         text-align: center;
         transition: var(--transition);

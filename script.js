@@ -184,7 +184,7 @@ function initAnimations() {
     mapPoints.forEach((point, index) => {
         point.addEventListener('mouseenter', () => {
             point.style.transform = 'scale(2)';
-            point.style.background = '#D4AF37';
+            point.style.background = '#E9B384';
             
             // Show region name
             const region = point.getAttribute('data-region');
@@ -196,7 +196,7 @@ function initAnimations() {
                 top: -30px;
                 left: 50%;
                 transform: translateX(-50%);
-                background: rgba(139,115,85,0.9);
+                background: rgba(124,157,150,0.9);
                 color: white;
                 padding: 5px 10px;
                 border-radius: 4px;
@@ -210,7 +210,7 @@ function initAnimations() {
         
         point.addEventListener('mouseleave', () => {
             point.style.transform = 'scale(1)';
-            point.style.background = '#D4AF37';
+            point.style.background = '#E9B384';
             const tooltip = point.querySelector('.region-tooltip');
             if (tooltip) {
                 tooltip.remove();
@@ -465,8 +465,8 @@ function initScrollToTop() {
         right: 30px;
         width: 50px;
         height: 50px;
-        background: linear-gradient(135deg, #D4AF37 0%, #E6C547 100%);
-        color: #8B7355;
+        background: linear-gradient(135deg, #E9B384 0%, #F4B860 100%);
+        color: #7C9D96;
         border: none;
         border-radius: 50%;
         font-size: 20px;
@@ -476,7 +476,7 @@ function initScrollToTop() {
         visibility: hidden;
         transition: all 0.3s ease;
         z-index: 1000;
-        box-shadow: 0 4px 12px rgba(139,115,85,0.15);
+        box-shadow: 0 4px 12px rgba(124,157,150,0.15);
     `;
     
     document.body.appendChild(scrollToTopBtn);
@@ -527,7 +527,7 @@ const throttledScrollHandler = throttle(() => {
     const navbar = document.getElementById('navbar');
     if (navbar) {
         const opacity = Math.min(scrolled / 100, 1);
-        navbar.style.background = `rgba(245, 242, 232, ${0.95 + (opacity * 0.03)})`;
+        navbar.style.background = `rgba(244, 242, 222, ${0.95 + (opacity * 0.03)})`;
     }
 }, 16); // ~60fps
 
@@ -564,7 +564,7 @@ function initAccessibility() {
         position: absolute;
         top: -40px;
         left: 6px;
-        background: #8B7355;
+        background: #7C9D96;
         color: white;
         padding: 8px;
         text-decoration: none;
