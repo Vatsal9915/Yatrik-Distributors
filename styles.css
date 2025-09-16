@@ -633,6 +633,15 @@ h1, h2, h3, h4, h5, h6 {
     will-change: transform;
 }
 
+/* Mobile fix for floating card */
+@media (max-width: 768px) {
+    .floating-card {
+        position: relative;
+        top: auto;
+        transform: none !important;
+    }
+}
+
 .card-image {
     margin-bottom: 2rem;
     border-radius: var(--border-radius);
@@ -1081,8 +1090,10 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .floating-card {
-        position: static;
-        top: auto;
+        position: static !important;
+        top: auto !important;
+        transform: none !important;
+        margin-top: 2rem;
     }
     
     .card-image img {
@@ -1156,8 +1167,10 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .floating-card {
-        position: static;
-        top: auto;
+        position: static !important;
+        top: auto !important;
+        transform: none !important;
+        margin-top: 1rem;
     }
     
     .card-image img {

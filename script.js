@@ -234,7 +234,10 @@ function initParallaxEffects() {
         const floatingCard = document.querySelector('.floating-card');
         const aboutSection = document.querySelector('.about');
         
-        if (floatingCard && aboutSection) {
+        // Disable floating card parallax on mobile devices
+        const isMobile = window.innerWidth <= 768;
+        
+        if (floatingCard && aboutSection && !isMobile) {
             const aboutRect = aboutSection.getBoundingClientRect();
             const cardRect = floatingCard.getBoundingClientRect();
             
@@ -253,6 +256,19 @@ function initParallaxEffects() {
                 const movement = scrollProgress * maxMovement;
                 floatingCard.style.transform = `translateY(${movement}px)`;
             }
+        } else if (floatingCard && isMobile) {
+            // Reset transform on mobile
+            floatingCard.style.transform = 'none';
+        }
+    });
+    
+    // Handle window resize to reset floating card on mobile
+    window.addEventListener('resize', () => {
+        const floatingCard = document.querySelector('.floating-card');
+        const isMobile = window.innerWidth <= 768;
+        
+        if (floatingCard && isMobile) {
+            floatingCard.style.transform = 'none';
         }
     });
 }
