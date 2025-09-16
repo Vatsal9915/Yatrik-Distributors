@@ -194,6 +194,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1300px) {
     .hero {
         padding: 1rem 0.5rem;
+        min-height: 100vh;
     }
     .robot-3D {
         left: 10%;
@@ -203,13 +204,40 @@ h1, h2, h3, h4, h5, h6 {
         height: 100%;
     }
     .hero-content {
-        margin-top: 85%;
+        margin-top: 60%;
+        position: relative;
+        z-index: 10;
     }
 }
 
 @media (max-width: 768px) {
     .robot-3D {
         display: none;
+    }
+    
+    .hero {
+        min-height: 100vh;
+        padding: 2rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        margin-top: 0;
+        position: relative;
+        z-index: 10;
+        width: 100%;
+    }
+    
+    .hero-title {
+        margin-bottom: 2rem;
+        line-height: 1.1;
+    }
+    
+    .title-line {
+        display: block;
+        margin-bottom: 0.2rem;
     }
 }
 
@@ -301,6 +329,13 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateY(50px);
     animation: slideUp 1s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+    .title-line {
+        transform: translateY(20px);
+        animation: slideUp 0.8s ease-out forwards;
+    }
 }
 
 .title-line:nth-child(1) { animation-delay: 0.2s; }
@@ -1066,8 +1101,32 @@ h1, h2, h3, h4, h5, h6 {
         left: 0;
     }
     
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding: 2rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        margin-top: 0;
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        text-align: center;
+    }
+    
     .hero-title {
         font-size: 2.5rem;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+    }
+    
+    .title-line {
+        display: block;
+        margin-bottom: 0.2rem;
     }
     
     .hero-stats {
@@ -1133,12 +1192,36 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0 15px;
     }
     
+    .hero {
+        min-height: 100vh;
+        padding: 1.5rem 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        margin-top: 0;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+    
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+    
+    .title-line {
+        display: block;
+        margin-bottom: 0.1rem;
     }
     
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
     }
     
     .service-card {
